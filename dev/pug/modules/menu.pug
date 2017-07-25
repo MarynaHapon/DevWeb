@@ -1,0 +1,64 @@
+nav.page-nav
+    ul.menu-list
+        each link, title in nav.navPages
+            li.menu-item
+                a(href= link).menu-link= title
+    div.btn-wrapper#toggle
+        span.btn.btn-top
+        span.btn.btn-middle
+        span.btn.btn-bottom
+
+		
+div.page-nav-overlay#overlay
+    div.wrap
+        div.inner
+            ul.menu-list-overlay
+                li.menu-item-overlay
+                    a(href= "about.html").menu-link-overlay= "About"
+                    ul.menu-sub-list
+                        each link, title in nav.About
+                            li
+                                a(href= link).sub-menu-link= title
+
+                li.menu-item-overlay
+                    a(href= "services.html").menu-link-overlay= "Services"
+                    ul.menu-sub-list
+                        each link, title in nav.Services
+                            li
+                                a(href= link)= title
+
+                li.menu-item-overlay
+                    a(href= "work.html").menu-link-overlay= "Work"
+                    ul.menu-sub-list
+                        each link, title in nav.Work
+                            li
+                                a(href= link)= title
+
+
+            div.social
+                a(href= "#")
+                    div.social-icon
+                        i.fa.fa-facebook
+
+                a(href= "#")
+                    div.social-icon
+                        i.fa.fa-twitter
+
+                a(href= "#")
+                    div.social-icon
+                        i.fa.fa-codepen
+
+                a(href= "#")
+                    div.social-icon
+                        i.fa.fa-behance
+
+                a(href= "#")
+                    div.social-icon
+                        i.fa.fa-dribbble
+
+
+
+
+				
+		
+

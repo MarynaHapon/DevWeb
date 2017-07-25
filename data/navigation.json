@@ -1,0 +1,24 @@
+{
+    "navPages": {
+        "About": "about.html",
+        "Services": "services.html",
+        "Work": "work.html"
+    },
+    "About": {
+        "About Company": "about.html#company",
+        "Designers": "about.html#designers",
+        "Developers": "about.html#developers",
+        "Pets": "about.html#pets"
+    },
+    "Services": {
+        "Development": "services.html#development",
+        "Apps": "services.html#apps",
+        "Graphic Design": "services.html#graphicdesign",
+        "Branding": "services.html#branding"
+    },
+    "Work": {
+        "Web": "work.html#web",
+        "Graphic": "work.html#graphic",
+        "Apps": "work.html#apps"
+    }
+}
