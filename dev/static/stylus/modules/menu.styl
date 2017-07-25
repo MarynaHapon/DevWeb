@@ -1,0 +1,170 @@
+.page-nav 
+    position relative
+    size(100%, auto)
+    overflow hidden
+    text-align center
+    background-color $bg-page-nav
+    
+.menu-list 
+    text-align center
+    
+.menu-item
+    display inline-block
+    
+.menu-link
+    display inline-block
+    padding 1em 3em
+    color $menu-link
+    transition .2s
+
+.menu-link:hover
+    color $menu-link-hover
+    
+.btn-burger-wrapper
+    position(absolute, 10px, 50px) // top 10, right 50
+    size(34px, 27px) // width 34, height 27
+    cursor pointer
+    z-index 999
+    transition .3s
+    
+.btn-burger-wrapper.active
+    .btn-burger-top
+        transform translateY(11px) translateX(0) rotate(45deg)
+    .btn-burger-middle
+        opacity: 0
+    .btn-burger-bottom
+        transform translateY(-11px) translateX(0) rotate(-45deg)
+
+.btn-burger-wrapper:hover
+    opacity 0.6
+        
+.btn-burger
+    position(absolute, , , , 0px)
+    size(100%, 5px)
+    background-color $bg-btn-burger
+    border none
+    border-radius 10px
+    transition  0.35s
+
+.btn-burger-top
+    top 0
+    
+.btn-burger-middle
+    top 11px
+
+.btn-burger-bottom
+    top 22px  
+    
+.page-nav-overlay
+    position(absolute, 0px, , ,0px)
+    size(100%, 100vh)
+    opacity 0
+    visibility hidden
+    overflow auto
+    background $bg-nav-overlay
+    transition .35s
+
+.open
+    opacity 1
+    visibility visible
+
+.wrap
+    display flex
+    justify-content center
+    align-items center
+
+.inner
+    position relative
+    width 90%
+    text-align center
+
+.menu-list-overlay
+    display flex
+    flex-direction row
+    justify-content space-around
+    padding 150px 0px 100px
+    text-transform capitalize
+    
+.menu-item-overlay
+    position relative
+    display inline-block
+    font-size 20px
+    vertical-align top
+
+.menu-link-overlay
+    display inline-block
+    line-height: 60px
+    font-size 24px
+    color $menu-link-overlay
+    text-decoration none
+    transition .2s
+
+.menu-link-overlay:hover 
+    color $menu-link-overlay-hover
+
+.menu-sub-list
+    li
+        padding 5px
+    
+.menu-sub-list
+    a
+        font-size 18px
+        color $menu-sub-list
+        transition .2s
+   
+.menu-sub-list
+    a:hover
+        color $menu-sub-list-hover
+
+.social
+    display flex
+    flex-direction row
+    justify-content center
+    margin 50px 0
+    padding 20px
+    border-top 2px solid $white
+    font-size 25px
+
+.social-icon
+    display flex
+    justify-content center
+    align-items center
+    margin 0 20px
+    size(80px, 50px)
+    background $bg-social-icon
+    color $social-icon
+    transition .2s
+
+.social-icon:hover
+    background $bg-social-icon-hover
+    color $social-icon-hover
+
+@media (max-width: 700px)
+    .menu-list-overlay
+        flex-direction column
+        align-items center
+        padding  50px 0 0
+
+    .social
+        flex-direction column
+        margin 50px 0
+        padding 50px 0 0
+
+    .social-icon
+        size(100%, 50px)
+        margin 10px 0
+
+    .page-nav
+        height 48px
+
+    .menu-link
+        display none
+
+    .menu-item-overlay
+        width 100%
+        padding-bottom 20px
+        border-bottom 2px solid $green
+
+    .menu-item-overlay:last-child
+        padding-bottom 0
+        border-bottom  none
