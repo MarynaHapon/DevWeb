@@ -75,7 +75,6 @@
 
 .inner
     position relative
-    //max-width 90%
     width 90%
     text-align center
 
@@ -84,13 +83,11 @@
     flex-direction row
     justify-content space-around
     padding 150px 0px 100px
-    //border-bottom 1px solid #575757
     text-transform capitalize
     
 .menu-item-overlay
     position relative
     display inline-block
-    //width 24%
     font-size 20px
     vertical-align top
 
@@ -151,7 +148,23 @@
     .social
         flex-direction column
         margin 50px 0
+        padding 50px 0 0
 
     .social-icon
         size(100%, 50px)
         margin 10px 0
+
+    .page-nav
+        height 48px
+
+    .menu-link
+        display none
+
+    .menu-item-overlay
+        width 100%
+        padding-bottom 20px
+        border-bottom 2px solid $green
+
+    .menu-item-overlay:last-child
+        padding-bottom 0
+        border-bottom  none
