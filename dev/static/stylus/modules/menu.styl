@@ -56,8 +56,8 @@
     top 22px  
     
 .page-nav-overlay
-    position(absolute, 0px, , ,0px) // problems with scroll height
-    size(100%, 100%)
+    position(absolute, 0px, , ,0px)
+    size(100%, 100vh)
     opacity 0
     visibility hidden
     overflow auto
@@ -67,31 +67,30 @@
 .open
     opacity 1
     visibility visible
-    height 100%
 
 .wrap
     display flex
     justify-content center
     align-items center
-    height 100%
 
 .inner
     position relative
-    max-width 90%
+    //max-width 90%
+    width 90%
     text-align center
 
 .menu-list-overlay
     display flex
     flex-direction row
     justify-content space-around
-    //padding 150px 0px 100px
+    padding 150px 0px 100px
     //border-bottom 1px solid #575757
     text-transform capitalize
     
 .menu-item-overlay
     position relative
     display inline-block
-    width 24%
+    //width 24%
     font-size 20px
     vertical-align top
 
@@ -124,7 +123,7 @@
     display flex
     flex-direction row
     justify-content center
-    margin 150px 0 50px
+    margin 50px 0
     padding 20px
     border-top 2px solid $white
     font-size 25px
@@ -143,5 +142,16 @@
     background $bg-social-icon-hover
     color $social-icon-hover
 
+@media (max-width: 700px)
+    .menu-list-overlay
+        flex-direction column
+        align-items center
+        padding  50px 0 0
 
-    
+    .social
+        flex-direction column
+        margin 50px 0
+
+    .social-icon
+        size(100%, 50px)
+        margin 10px 0
