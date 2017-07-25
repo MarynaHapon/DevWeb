@@ -15,28 +15,27 @@
     display inline-block
     padding 1em 3em
     color $menu-link
-    transition-property all .2s linear 0s
-
+    transition .2s
 
 .menu-link:hover
     color $menu-link-hover
     
-.btn-wrapper
+.btn-burger-wrapper
     position(absolute, 10px, 50px) // top 10, right 50
     size(34px, 27px) // width 34, height 27
     cursor pointer
     z-index 999
     transition .3s
     
-.btn-wrapper.active
-    .btn-top 
+.btn-burger-wrapper.active
+    .btn-burger-top
         transform translateY(11px) translateX(0) rotate(45deg)
-    .btn-middle
+    .btn-burger-middle
         opacity: 0
-    .btn-bottom
+    .btn-burger-bottom
         transform translateY(-11px) translateX(0) rotate(-45deg)
 
-.btn-wrapper:hover
+.btn-burger-wrapper:hover
     opacity 0.6
         
 .btn-burger
@@ -45,7 +44,7 @@
     background-color $bg-btn-burger
     border none
     border-radius 10px
-    transition  all 0.35s ease
+    transition  0.35s
 
 .btn-burger-top
     top 0
@@ -57,14 +56,14 @@
     top 22px  
     
 .page-nav-overlay
-    position(fixed, 0px, , ,0px)
+    position(absolute, 0px, , ,0px) // problems with scroll height
     size(100%, 100%)
     opacity 0
     visibility hidden
     overflow auto
     background $bg-nav-overlay
-    transition opacity .35s, visibility .35s, height .35s
-    
+    transition .35s
+
 .open
     opacity 1
     visibility visible
@@ -80,7 +79,6 @@
     position relative
     max-width 90%
     text-align center
-    //color #e9e9e9
 
 .menu-list-overlay
     display flex
@@ -103,7 +101,7 @@
     font-size 24px
     color $menu-link-overlay
     text-decoration none
-    transition-property all .2s linear 0s
+    transition .2s
 
 .menu-link-overlay:hover 
     color $menu-link-overlay-hover
@@ -116,6 +114,7 @@
     a
         font-size 18px
         color $menu-sub-list
+        transition .2s
    
 .menu-sub-list
     a:hover
@@ -138,7 +137,7 @@
     size(80px, 50px)
     background $bg-social-icon
     color $social-icon
-    transition-property all .2s linear 0s
+    transition .2s
 
 .social-icon:hover
     background $bg-social-icon-hover
