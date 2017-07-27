@@ -1,9 +1,10 @@
 .page-nav 
-    position relative
+    position fixed
     size(100%, auto)
     overflow hidden
     text-align center
     background-color $bg-page-nav
+    z-index 1000
     
 .menu-list 
     text-align center
@@ -21,11 +22,11 @@
     color $menu-link-hover
     
 .btn-burger-wrapper
-    position(absolute, 10px, 50px) // top 10, right 50
+    position(fixed, 10px, 50px) // top 10, right 50
     size(34px, 27px) // width 34, height 27
     cursor pointer
-    z-index 999
     transition .3s
+    z-index 1010
     
 .btn-burger-wrapper.active
     .btn-burger-top
@@ -67,6 +68,7 @@
 .open
     opacity 1
     visibility visible
+    z-index 1005
 
 .wrap
     display flex
@@ -166,5 +168,4 @@
         border-bottom 2px solid $green
 
     .menu-item-overlay:last-child
-        padding-bottom 0
         border-bottom  none
